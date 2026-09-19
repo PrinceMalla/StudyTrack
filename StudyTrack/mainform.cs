@@ -13,7 +13,7 @@ namespace StudyTrack
 
         private void btnAddSubject_Click(object sender, EventArgs e)
         {
-            string name = txtSubjectName.Text.Trim();
+            string name = TxtSubjectName.Text.Trim();
             string code = txtSubjectCode.Text.Trim();
 
             if (name == "" || code == "")
@@ -28,25 +28,28 @@ namespace StudyTrack
                 return;
             }
 
-            Subject newSubject = new Subject();
-
-            newSubject.SubjectId = subjects.Count + 1;
-            newSubject.Name = name;
-            newSubject.Code = code;
-            newSubject.ColourTag = "#4CAF50";
+            Subject newSubject = new Subject
+            {
+                SubjectId = subjects.Count + 1,
+                Name = name,
+                Code = code,
+                ColourTag = "#4CAF50"
+            };
 
             subjects.Add(newSubject);
 
-            lstSubjects.Items.Add(
+            LstSubjects.Items.Add(
                 newSubject.Code + " - " + newSubject.Name
             );
 
-            txtSubjectName.Clear();
+            TxtSubjectName.Clear();
             txtSubjectCode.Clear();
 
             MessageBox.Show(
                 "Subject added successfully.",
-                "StudyTrack"
+                "StudyTrack",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
             );
         }
     }
