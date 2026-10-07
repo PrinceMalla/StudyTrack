@@ -2,12 +2,66 @@
 {
     public class Subject
     {
-        public int SubjectId { get; set; }
+        private int subjectId;
+        private string name = "";
+        private string code = "";
+        private string colourTag = "";
 
-        public string Name { get; set; } = "";
+        public int SubjectId
+        {
+            get
+            {
+                return subjectId;
+            }
+            set
+            {
+                subjectId = value;
+            }
+        }
 
-        public string Code { get; set; } = "";
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    name = value;
+                }
+            }
+        }
 
-        public string ColourTag { get; set; } = "";
+        public string Code
+        {
+            get
+            {
+                return code;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    code = value;
+                }
+            }
+        }
+
+        public string ColourTag
+        {
+            get
+            {
+                return colourTag;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    colourTag = value;
+                }
+            }
+        }
     }
 }

@@ -153,9 +153,9 @@
             // LstTasks
             // 
             LstTasks.FormattingEnabled = true;
-            LstTasks.Location = new Point(242, 433);
+            LstTasks.Location = new Point(119, 433);
             LstTasks.Name = "LstTasks";
-            LstTasks.Size = new Size(120, 94);
+            LstTasks.Size = new Size(367, 94);
             LstTasks.TabIndex = 13;
             // 
             // TxtTaskTitle
@@ -183,12 +183,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(119, 382);
+            label1.Location = new Point(100, 383);
             label1.Name = "label1";
             label1.Size = new Size(58, 15);
             label1.TabIndex = 17;
             label1.Text = "Task Type";
-         
             // 
             // MainForm
             // 
