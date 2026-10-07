@@ -34,6 +34,8 @@
             LstTasks = new ListBox();
             TxtTaskTitle = new TextBox();
             DtpDueDate = new DateTimePicker();
+            CmbTaskType = new ComboBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // LblSubjectName
@@ -140,7 +142,7 @@
             // 
             // BtnAddTask
             // 
-            BtnAddTask.Location = new Point(242, 371);
+            BtnAddTask.Location = new Point(266, 404);
             BtnAddTask.Name = "BtnAddTask";
             BtnAddTask.Size = new Size(75, 23);
             BtnAddTask.TabIndex = 12;
@@ -151,7 +153,7 @@
             // LstTasks
             // 
             LstTasks.FormattingEnabled = true;
-            LstTasks.Location = new Point(225, 396);
+            LstTasks.Location = new Point(242, 433);
             LstTasks.Name = "LstTasks";
             LstTasks.Size = new Size(120, 94);
             LstTasks.TabIndex = 13;
@@ -170,11 +172,31 @@
             DtpDueDate.Size = new Size(200, 23);
             DtpDueDate.TabIndex = 15;
             // 
+            // CmbTaskType
+            // 
+            CmbTaskType.FormattingEnabled = true;
+            CmbTaskType.Location = new Point(177, 375);
+            CmbTaskType.Name = "CmbTaskType";
+            CmbTaskType.Size = new Size(121, 23);
+            CmbTaskType.TabIndex = 16;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(119, 382);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 15);
+            label1.TabIndex = 17;
+            label1.Text = "Task Type";
+         
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 539);
+            Controls.Add(label1);
+            Controls.Add(CmbTaskType);
             Controls.Add(DtpDueDate);
             Controls.Add(TxtTaskTitle);
             Controls.Add(LstTasks);
@@ -215,5 +237,7 @@
         private ListBox LstTasks;
         private TextBox TxtTaskTitle;
         private DateTimePicker DtpDueDate;
+        private ComboBox CmbTaskType;
+        private Label label1;
     }
 }
