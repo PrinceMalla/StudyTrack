@@ -486,10 +486,18 @@ namespace StudyTrack
                 Subject selectedSubject =
                     subjects[CmbTaskSubject.SelectedIndex];
 
+                int nextTaskId = 1;
+
+                if (tasks.Count > 0)
+                {
+                    nextTaskId =
+                        tasks.Max(t => t.TaskId) + 1;
+                }
+
                 StudyTask newTask =
                     new StudyTask
                     {
-                        TaskId = tasks.Count + 1,
+                        TaskId = nextTaskId,
                         Title = title,
                         SubjectId = selectedSubject.SubjectId,
                         DueDate = DtpDueDate.Value,
