@@ -253,7 +253,12 @@ namespace StudyTrack
             button.ForeColor = Color.White;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(21, 101, 116);
+            button.FlatAppearance.MouseDownBackColor =
+                Color.FromArgb(18, 87, 100);
             button.Cursor = Cursors.Hand;
+            button.UseVisualStyleBackColor = false;
         }
 
         private void LoadData()
